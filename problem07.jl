@@ -1,5 +1,7 @@
+#!/usr/bin/env julia
 
-function find_prime(target::Int32)
+
+function find_prime(target::Int)
     num_primes, current_number = 0, 0
     while true
         if isprime(current_number)
@@ -16,4 +18,4 @@ function main()
     println("The answer is $(find_prime(10001))")
 end
 
-println(@elapsed main())
+@time main()

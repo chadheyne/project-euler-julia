@@ -1,3 +1,5 @@
+#!/usr/bin/env julia
+
 
 function divisible()
     return lcm([1:20]...)
@@ -7,4 +9,4 @@ function main()
     println("The answer is: $(divisible())")
 end
 
-println(@elapsed main())
+@time main()

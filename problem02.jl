@@ -1,5 +1,7 @@
+#!/usr/bin/env julia
 
-function generate_fibonacci(limit::Int32)
+
+function generate_fibonacci(limit::Int)
     a, b = 0, 1
     while a <= limit
         if iseven(a)
@@ -14,4 +16,4 @@ function main()
     println("The answer is $(sum(fibonacci))")
 end
 
-println(@elapsed main())
+@time main()
